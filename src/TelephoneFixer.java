@@ -27,7 +27,7 @@ public class TelephoneFixer {
             System.out.println("Couldn't open file to read");
             return;
         }
-        Matcher matcher = Pattern.compile("\\s+\\+?(\\d[\\s\\-\\(\\)\\+]{0,3}){11}\\s+").matcher(in);
+        Matcher matcher = Pattern.compile("\\s+\\+?(\\d[\\s\\-\\(\\)\\+]{0,3}){11}").matcher(in);
         StringBuffer out = new StringBuffer();
         while (matcher.find()) {
             String number = matcher.group();
